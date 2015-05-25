@@ -20,18 +20,30 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        String numberString;
+        String numberString = "";
         double subTotal;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        private void unNull(String num)
+        {
+            if (num == null)
+            {
+                numberString += "0";
+            }
+        }
+        /*
+         * Adds the new character based on the number/symbol clicked.
+         */
         private void zero_Click(object sender, RoutedEventArgs e)
         {
-            numberString += "0";
-            numberCurrentField.Text = numberString;
+            if (!numberString.Equals(0.0))
+            {
+                numberString += "0";
+                numberCurrentField.Text = numberString;
+            }
         }
 
         private void one_Click(object sender, RoutedEventArgs e)
@@ -93,20 +105,15 @@ namespace Calculator
             numberString += ".";
         }
 
+        /*
+         * Calculates the expression and queues a new operation.
+         */
         private void add_Click(object sender, RoutedEventArgs e)
         {
             queued_op();
             operatorField.Text = "+";
             set();
         }
-
-        private void set()
-        {
-            numberSubField.Text = subTotal.ToString();
-            numberString = "";
-            numberCurrentField.Text = "0.0";      
-        }
-
 
         private void subtract_Click(object sender, RoutedEventArgs e)
         {
@@ -150,30 +157,86 @@ namespace Calculator
             set();
         }
 
+        /*
+        * Clears the fields.
+        */
+        private void clear_Click(object sender, RoutedEventArgs e)
+        {
+            subTotal = 0;
+            operatorField.Text = "";
+            set();
+        }
+        /*
+         * Sets the current field to zero and updates the subTotal field.
+         */
+        private void set()
+        {
+            numberSubField.Text = subTotal.ToString();
+            numberString = "";
+            numberCurrentField.Text = "0.0";
+        }
+
+        /*
+         * Calculates the subtotal of the expression based on the queued operation
+         */
         private void queued_op()
         {
             String caseSwitch = operatorField.Text;     
             switch (caseSwitch)
             {
                 case "+":
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }
                     subTotal += Double.Parse(numberString);
                     break;
                 case "-":
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }
                     subTotal -= Double.Parse(numberString);
                     break;
                 case "/":
-                    subTotal = subTotal / Double.Parse(numberString);
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }
+                    if (Double.Parse(numberString) != 0)
+                    {
+                        subTotal = subTotal / Double.Parse(numberString);
+                    }
                     break;
                 case "*":
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }
                     subTotal = subTotal * Double.Parse(numberString);
                     break;
                 case "%":
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }
                     subTotal = subTotal % Double.Parse(numberString);
                     break;
                 case "√":
-                    subTotal = Math.Sqrt(Double.Parse(numberString));
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }
+                    if (subTotal != 0)
+                    {
+                        subTotal = Math.Sqrt(subTotal);
+                    }
                     break;
                 case "":
+                    if (numberString == "")
+                    {
+                        numberString = "0";
+                    }                  
                     subTotal = Double.Parse(numberString);
                     break;
                 case "=":

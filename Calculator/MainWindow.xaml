@@ -19,7 +19,7 @@
             <Button x:Name="three" Content="3" HorizontalAlignment="Left" Margin="80,80,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="three_Click"/>
             <Button x:Name="zero" Content="0" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="zero_Click"/>
             <Button x:Name="dot" Content="." HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="dot_Click"/>
-            <Button x:Name="clear" Content="C" HorizontalAlignment="Left" Margin="80,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527"/>
+            <Button x:Name="clear" Content="C" HorizontalAlignment="Left" Margin="80,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="clear_Click"/>
             <Button x:Name="equals" Content="=" HorizontalAlignment="Left" Margin="115,115,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="equals_Click"/>
             <Button x:Name="add" Content="+" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="add_Click"/>
             <Button x:Name="multiply" Content="*" HorizontalAlignment="Left" Margin="115,45,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="multiply_Click"/>
