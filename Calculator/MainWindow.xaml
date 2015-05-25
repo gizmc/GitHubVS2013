@@ -14,22 +14,24 @@
             <Button x:Name="four" Content="4" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="four_Click"/>
             <Button x:Name="five" Content="5" HorizontalAlignment="Left" Margin="45,45,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.5,0.5" Click="five_Click"/>
             <Button x:Name="six" Content="6" HorizontalAlignment="Left" Margin="80,45,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="six_Click"/>
-            <Button x:Name="one" Content="1" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" />
+            <Button x:Name="one" Content="1" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="one_Click"/>
             <Button x:Name="two" Content="2" HorizontalAlignment="Left" Margin="45,80,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.5,0.5" Click="two_Click"/>
-            <Button x:Name="three" Content="3" HorizontalAlignment="Left" Margin="80,80,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527"/>
+            <Button x:Name="three" Content="3" HorizontalAlignment="Left" Margin="80,80,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="three_Click"/>
             <Button x:Name="zero" Content="0" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="zero_Click"/>
-            <Button x:Name="dot" Content="." HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527"/>
+            <Button x:Name="dot" Content="." HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527" Click="dot_Click"/>
             <Button x:Name="clear" Content="C" HorizontalAlignment="Left" Margin="80,115,0,0" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.767,0.527"/>
-            <Button x:Name="equals" Content="=" HorizontalAlignment="Left" Margin="115,115,0,0" VerticalAlignment="Top" Width="95" Height="30"/>
-            <Button x:Name="add" Content="+" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
-            <Button x:Name="multiply" Content="*" HorizontalAlignment="Left" Margin="115,45,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
-            <Button x:Name="subtract" Content="-" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
-            <Button x:Name="divide" Content="/" HorizontalAlignment="Left" Margin="165,45,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
-            <Button x:Name="mod" Content="%" HorizontalAlignment="Left" Margin="115,80,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
-            <Button x:Name="sqrt" Content="√" HorizontalAlignment="Left" Margin="165,80,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
+            <Button x:Name="equals" Content="=" HorizontalAlignment="Left" Margin="115,115,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="equals_Click"/>
+            <Button x:Name="add" Content="+" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="add_Click"/>
+            <Button x:Name="multiply" Content="*" HorizontalAlignment="Left" Margin="115,45,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="multiply_Click"/>
+            <Button x:Name="subtract" Content="-" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="subtract_Click"/>
+            <Button x:Name="divide" Content="/" HorizontalAlignment="Left" Margin="165,45,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="divide_Click"/>
+            <Button x:Name="mod" Content="%" HorizontalAlignment="Left" Margin="115,80,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="mod_Click"/>
+            <Button x:Name="sqrt" Content="√" HorizontalAlignment="Left" Margin="165,80,0,0" VerticalAlignment="Top" Width="45" Height="30" Click="sqrt_Click"/>
         </Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="55" Margin="20,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="198"/>
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="26,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+        <TextBlock x:Name="numberSubField" HorizontalAlignment="Left" Height="21" Margin="23,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+        <TextBlock x:Name="numberCurrentField" HorizontalAlignment="Left" Height="21" Margin="22,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Text="0.0"/>
+        <TextBlock x:Name="operatorField" HorizontalAlignment="Left" Height="23" Margin="184,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
 
     </Grid>
 </Window>
